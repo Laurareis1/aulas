@@ -6,6 +6,8 @@ import Images from './pages/images/Images';
 import Videos from './pages/videos/Videos';
 import Layout from './pages/layout/Layout';
 import Counterpage from './pages/counter/counterpage';
+import Newpage from './pages/newpage/Newpage';
+import ContactPage from './pages/contacto/contacto';
 
 function App() {
   return (
@@ -17,6 +19,9 @@ function App() {
           <Route path="images" element={<Images />} />
           <Route path="videos" element={<Videos />} />
           <Route path="counter" element={<Counterpage/>} />
+          <Route path="newpage" element={<Newpage/>} />
+          <Route path="contacto" element={<ContactPage/>} />
+
          </Route>
       </Routes>
       </BrowserRouter>

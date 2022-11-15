@@ -1,0 +1,12 @@
+
+
+function Mensagem(){
+    const input = useRef();
+    const [tasks, setTasks] = useState([]);
+ return<>
+    <input ref={input} type="text"placeholder="Write task" />
+          <button onClick={add}>ADD</button>
+   </>
+    
+}
+export default Mensagem

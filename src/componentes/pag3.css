@@ -1,0 +1,18 @@
+.top-menu div {
+    border: 1px solid black;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.top-menu {
+    display: flex;
+    gap: 15px;
+    margin:20px;
+   
+}
+
+.meio {
+display:flex;
+gap: 15px;
+align-items: center
+}

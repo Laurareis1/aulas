@@ -6,7 +6,9 @@ return<>   <nav>
 <Link to ='/'>All</Link>
  <Link to ='/images'>Images</Link>
  <Link to ='/videos'>Videos</Link>
- <Link to='/counter'>Counter</Link><br />
+ <Link to='/counter'>Counter</Link>
+ <Link to='/newpage'>Newpage</Link>
+ <Link to='/contacto'>contacto</Link><br />
 </nav>
     <div className='midle-section'>
             <aside>
@@ -14,6 +16,8 @@ return<>   <nav>
                 <Link to='/images'>Images</Link><br />
                 <Link to='/videos'>Videos</Link><br />
                 <Link to='/counter'>Counter</Link><br />
+                <Link to='/newpage'>Newpage</Link><br />
+                <Link to='/contacto'>contacto</Link><br />
             </aside>
 
             <div className="content">
