@@ -8,7 +8,6 @@ function Result(props) {
         <h4><Link to='/videos'>{props.title}</Link></h4>
         <p>{props.summary}</p>
     </div>
-
 }
 
 export default Result;
