@@ -9,6 +9,7 @@ return<>   <nav>
  <Link to='/counter'>Counter</Link>
  <Link to='/newpage'>Newpage</Link>
  <Link to='/contacto'>contacto</Link><br />
+ <Link to='/table'>table</Link><br />
 </nav>
     <div className='midle-section'>
             <aside>
@@ -18,6 +19,7 @@ return<>   <nav>
                 <Link to='/counter'>Counter</Link><br />
                 <Link to='/newpage'>Newpage</Link><br />
                 <Link to='/contacto'>contacto</Link><br />
+                <Link to='/table'>table</Link><br />
             </aside>
 
             <div className="content">

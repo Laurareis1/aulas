@@ -10,21 +10,27 @@ function PhoneBook() {
     const [phoneBookList, setPhoneBookList] = useState([]);
     const [searchResult, setSearchResult] = useState([]);
     const [resultActive, setResultActive] = useState(false);
-   
 
 
     function add() {
         const name = nameRef.current.value;
         const phone = phoneRef.current.value;
 
+        const foundContact = phoneBookList.find(contact => contact.name==name);
+
+        if(foundContact!=undefined) {
+            alert('Contact with name '+name+ ' is already in the contact list.');
+            return;
+        }
+
         const newContact = {
             name: name,
-            phone: phone
+            phone: phone,
+            createdAt : new Date(),
         }
-    
 
         phoneBookList.push(newContact);
-
+        phoneBookList.sort((a,b)=>a.name.toLowerCase()>b.name.toLowerCase()?1:-1);
         console.log(phoneBookList);
 
         setPhoneBookList([...phoneBookList]);
@@ -49,6 +55,13 @@ function PhoneBook() {
         searchRef.current.value=null;
         setSearchResult([]);
         setResultActive(false);
+    }
+
+    function editContact(i) {
+        const contact = phoneBookList[i];
+        nameRef.current.value = contact.name;
+        phoneRef.current.value = contact.phone;
+        removeContact(i);
     }
 
     function removeContact(i) {
@@ -84,11 +97,14 @@ function PhoneBook() {
 
             {phoneBookList.length==0 && 
                 <span>No contact in your phonebook!</span>}
-
+               
             {phoneBookList.map((contact, i)=>
                 <div key={i} className="contact-item">
                     Name: {contact.name}<br/>
-                    Phone: {contact.phone}
+                    Phone: {contact.phone}<br/>
+                    Created at: {contact.createdAt.toLocaleString()}<br/>
+
+                    <button onClick={()=>editContact(i)}>Edit</button>
                     <button onClick={()=>removeContact(i)}>Delete</button>
                 </div>
             )}
