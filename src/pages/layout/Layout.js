@@ -10,6 +10,7 @@ return<>   <nav>
  <Link to='/newpage'>Newpage</Link>
  <Link to='/contacto'>contacto</Link><br />
  <Link to='/table'>table</Link><br />
+ <Link to='/pesquisa'>pesquisa</Link><br />
 </nav>
     <div className='midle-section'>
             <aside>
@@ -20,6 +21,7 @@ return<>   <nav>
                 <Link to='/newpage'>Newpage</Link><br />
                 <Link to='/contacto'>contacto</Link><br />
                 <Link to='/table'>table</Link><br />
+                <Link to='/pesquisa'>pesquisa</Link><br />
             </aside>
 
             <div className="content">

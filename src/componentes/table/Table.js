@@ -1,24 +1,30 @@
-function Tabela(){
+function Table(props) {
 
-    return<>
-<table border="1">
-    <tr>
-        <td>Nome</td>
-        <td>Idade</td>
-        <td>Profissão</td>
-    </tr>
-    <tr>
-        <td>Ted</td>
-        <td>22</td>
-        <td>Estudante</td>
-    </tr>
-    <tr>
-        <td>Ralf</td>
-        <td>26</td>
-        <td>Designer</td>
-    </tr>
-</table>
 
-    </>
+    return <table border="1">
+
+        <thead>
+            <tr>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Gender Name</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            {props.list.map((person, i) =>
+                <tr key={i}>
+                    <td>{person.firstName}</td>
+                    <td>{person.lastName}</td>
+                    <td>{person.gender}</td>
+                    <td>
+                        <button onClick={()=>props.rm(i)}>Remove</button>
+                    </td>
+                </tr>
+            )}
+        </tbody>
+
+    </table>
 }
-export default Tabela;
+
+export default Table;

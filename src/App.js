@@ -9,6 +9,7 @@ import Counterpage from './pages/counter/counterpage';
 import Newpage from './pages/newpage/Newpage';
 import ContactPage from './pages/contacto/contacto';
 import TablePage from './pages/Table';
+import Pesquisa from './pages/pesquisa/pesquisa';
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
           <Route path="newpage" element={<Newpage/>} />
           <Route path="contacto" element={<ContactPage/>} />
           <Route path="Table" element={<TablePage/>} />
+          <Route path="Pesquisa" element={<Pesquisa/>} />
 
          </Route>
       </Routes>
